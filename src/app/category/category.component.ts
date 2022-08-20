@@ -7,21 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
-  category: any = [];
+  category: any = []
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.http
       .get('https://store.vrunibex.com/mobile2/mbProduct/CategoryList')
-      .subscribe(
-        (data) => {
-          this.category = data;
-          console.log(this.category);
-        },
-        (error) => console.log(error)
-      )
-  }
-  categoryMap() {
-    return this.category.Result.TreeList;
+      .subscribe((data) => {
+        this.category = data;
+        console.log(this.category);
+      });
   }
 }
