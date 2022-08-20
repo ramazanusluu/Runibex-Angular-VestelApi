@@ -1,7 +1,7 @@
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container">
-      <button class="btn btn-danger fs-6 active">
+      <button class="btn btn-danger fs-6 active" (click)="isOpen()">
         <i class="fa-solid fa-bars me-2"></i>
         Tüm Ürünler
       </button>
@@ -54,6 +54,6 @@
   </nav>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="open">
   <app-sidebar></app-sidebar>
 </div>
