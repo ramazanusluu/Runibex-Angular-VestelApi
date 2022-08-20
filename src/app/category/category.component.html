@@ -1,0 +1,26 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col-sm-6 col-lg-4 col-xl-3" *ngFor="let item of categoryMap()">
+      <div class="card mt-5">
+        <div class="card-head">
+          <img
+            *ngIf="item.ImageUri; else resim"
+            src="{{ item.ImageUri }}"
+            class="card-img-top"
+            alt="resim"
+          />
+        </div>
+      </div>
+      <div class="card-text title my-3 text-center">
+        {{ item.DisplayName }}
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #resim>
+  <img
+    src="../../assets/image/dummy.jpg"
+    alt="dummy gorsel"
+    class="card-img-top"
+  />
+</ng-template>
