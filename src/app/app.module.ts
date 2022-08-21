@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoryComponent } from './category/category.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SubCategoryComponent } from './sub-category/sub-category.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     SidebarComponent,
     CategoryComponent,
+    SubCategoryComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

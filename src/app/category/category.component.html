@@ -4,7 +4,7 @@
       class="col-sm-6 col-lg-4 col-xl-3"
       *ngFor="let item of category.Result.TreeList"
     >
-      <a href="/">
+      <a routerLink="category/{{ item.ID }}">
         <div class="card mt-5">
           <div class="card-head">
             <img
