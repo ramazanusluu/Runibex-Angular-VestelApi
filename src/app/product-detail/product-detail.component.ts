@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
-  productDetail: any;
+  productDetail: any = [];
   constructor(
     private http: HttpClient,
     private activatedRoute: ActivatedRoute
