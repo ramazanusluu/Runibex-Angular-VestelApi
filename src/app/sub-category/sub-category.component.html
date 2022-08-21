@@ -7,7 +7,7 @@
       class="col-sm-6 col-lg-4 col-xl-3"
       *ngFor="let item of subCategory.Result.TopCategory.SubCategoryList"
     >
-      <a href="/">
+      <a routerLink="/products/{{item.ID}}">
         <div class="card subCategory-card mt-5">
           <div class="card-head subCategory-card-head">
             <img

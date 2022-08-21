@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoryComponent } from './category/category.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SubCategoryComponent } from './sub-category/sub-category.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SubCategoryComponent } from './sub-category/sub-category.component';
     SidebarComponent,
     CategoryComponent,
     SubCategoryComponent,
+    ProductComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
