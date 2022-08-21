@@ -10,6 +10,7 @@ import { CategoryComponent } from './category/category.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ProductComponent } from './product/product.component';
     CategoryComponent,
     SubCategoryComponent,
     ProductComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
