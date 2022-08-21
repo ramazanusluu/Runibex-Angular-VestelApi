@@ -1,19 +1,24 @@
 <div class="container my-3">
   <div class="row">
-    <div class="col-sm-6 col-lg-4 col-xl-3" *ngFor="let item of category.Result.TreeList">
-      <div class="card mt-5">
-        <div class="card-head">
-          <img
-            *ngIf="item.ImageUri; else resim"
-            src="{{ item.ImageUri }}"
-            class="card-img-top"
-            alt="resim"
-          />
+    <div
+      class="col-sm-6 col-lg-4 col-xl-3"
+      *ngFor="let item of category.Result.TreeList"
+    >
+      <a href="/">
+        <div class="card mt-5">
+          <div class="card-head">
+            <img
+              *ngIf="item.ImageUri; else resim"
+              src="{{ item.ImageUri }}"
+              class="card-img-top"
+              alt="resim"
+            />
+          </div>
         </div>
-      </div>
-      <div class="card-text title my-3 text-center">
-        {{ item.DisplayName }}
-      </div>
+        <div class="card-text title my-3 text-center">
+          {{ item.DisplayName }}
+        </div>
+      </a>
     </div>
   </div>
 </div>

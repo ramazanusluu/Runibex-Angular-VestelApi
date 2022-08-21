@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoryComponent } from './category/category.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CategoryComponent } from './category/category.component';
     SidebarComponent,
     CategoryComponent,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
