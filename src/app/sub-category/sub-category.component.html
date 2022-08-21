@@ -1,1 +1,34 @@
-<p>sub-category works!</p>
+<div class="container my-5">
+  <div class="row">
+    <h5 class="display-6 text-center">
+      {{ subCategory.Result.CategoryName }}
+    </h5>
+    <div
+      class="col-sm-6 col-lg-4 col-xl-3"
+      *ngFor="let item of subCategory.Result.TopCategory.SubCategoryList"
+    >
+      <a href="/">
+        <div class="card subCategory-card mt-5">
+          <div class="card-head subCategory-card-head">
+            <img
+              *ngIf="item.ImageUri; else resim"
+              src="{{ item.ImageUri }}"
+              class="card-img-top"
+              alt="resim"
+            />
+          </div>
+        </div>
+        <div class="card-text title my-3 text-center">
+          {{ item.DisplayName }}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<ng-template #resim>
+  <img
+    src="../../assets/image/dummy.jpg"
+    alt="dummy gorsel"
+    class="card-img-top"
+  />
+</ng-template>
