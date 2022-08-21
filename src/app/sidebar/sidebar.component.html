@@ -1,8 +1,14 @@
 <div class="sidebar">
-  <ul>
-    <li>ANGULAR</li>
-    <ul>
-      <li>REACT</li>
+  <ul *ngFor="let item of category.Result.TreeList">
+    <li>
+      <a>
+        {{ item.DisplayName }}
+      </a>
+    </li>
+    <ul *ngFor="let item2 of item.SubCategoryList">
+      <li>
+        <a>{{ item2.DisplayName }}</a>
+      </li>
     </ul>
   </ul>
 </div>
