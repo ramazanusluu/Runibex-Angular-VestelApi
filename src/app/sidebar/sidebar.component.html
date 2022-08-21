@@ -1,13 +1,19 @@
 <div class="sidebar">
   <ul *ngFor="let item of category.Result.TreeList">
     <li>
-      <a>
-        {{ item.DisplayName }}
+      <a routerLink="/category/{{ item.ID }}">
+        <button class="btn btn-danger category">
+          {{ item.DisplayName }}
+        </button>
       </a>
     </li>
     <ul *ngFor="let item2 of item.SubCategoryList">
       <li>
-        <a>{{ item2.DisplayName }}</a>
+        <a routerLink="/products/{{ item2.ID }}">
+          <button class="btn btn-danger subCategory">
+            {{ item2.DisplayName }}
+          </button>
+        </a>
       </li>
     </ul>
   </ul>
