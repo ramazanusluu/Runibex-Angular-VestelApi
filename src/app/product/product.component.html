@@ -1,1 +1,55 @@
-<p>product works!</p>
+<div class="container my-5">
+  <div class="row">
+    <div
+      class="col-sm-6 col-lg-4 col-xl-3"
+      *ngFor="let item of product.Result.ProductList"
+    >
+      <div class="card product-card my-5">
+        <div class="card-head text-center fw-bold">
+          <img
+            *ngIf="item.FirstProductImageURL; else resim"
+            src="{{ item.FirstProductImageURL }}"
+            class="card-img-top"
+            alt="{{ item.DisplayName }}"
+          />
+          <div class="card-text p-1">{{ item.DisplayName }}</div>
+        </div>
+        <div class="card-body">
+          <p class="card-text text-muted text-center mb-0">
+            {{ item.AttributeList[0].DisplayName }}
+          </p>
+          <p class="card-text text-muted text-center">
+            {{ item.AttributeList[1].DisplayName }}
+          </p>
+          <h4 class="fw-bold text-center">
+            {{ item.StrikeThroughPriceToShowOnScreen }} TL
+          </h4>
+          <div class="text-center my-4">
+            <input
+              type="checkbox"
+              name="check"
+              id="check"
+              class="form-check-input"
+            />
+            <label for="check" class="form-check-label text-muted">
+              Karşılaştır
+            </label>
+          </div>
+        </div>
+        <div>
+          <a href="/">
+            <button type="button" class="btn-incele">İNCELE</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #resim>
+  <img
+    src="../../assets/image/dummy.jpg"
+    alt="dummy gorsel"
+    class="card-img-top"
+  />
+</ng-template>
