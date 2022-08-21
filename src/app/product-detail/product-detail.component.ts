@@ -16,7 +16,15 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      console.log(params['product']);
+      this.http
+        .get(
+          'https://store.vrunibex.com/mobile2/mbProduct/ProductDetail?productId=' +
+            params['product']
+        )
+        .subscribe((data) => {
+          this.productDetail = data;
+          console.log(this.productDetail);
+        });
     });
   }
 }
